@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>LEO</title>
+   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   <header>
+       <!--nav-->
+       <div class="nav container">
+           <!---logo-->
+           <a href="" class="logo">
+               Film <span>Fusion</span>
+           </a>
+           <!-------Search box-->
+           <div class="search-box">
+               <input type="search" name="" id="search-input" placeholder="search movie">
+               <i class='bx bx-search'></i>
+           </div>
+           <!-----user---------->
+           <a href="#" class="user">
+               <img src="bw .png" alt="FF" class="user-img">
+           </a>
+           <div class="navbar">
+               <a href="nextpage.html" class="nav-link nav-active">
+                   <i class='bx bx-home' ></i>
+                   <span class="nav-link-title">home</span>
+               </a>
+               <a href="#popular" class="nav-link">
+                   <i class='bx bxs-hot' ></i>
+                   <span class="nav-link-title">Trending</span>
+               </a>
+               <a href="#movies" class="nav-link">
+                   <i class='bx bx-compass' ></i>
+                   <span class="nav-link-title">Explore</span>
+               </a>
+               
+               <a href="#contact" class="nav-link">
+                   <i class='bx bxs-contact' ></i>
+                   <span class="nav-link-title">contact</span>
+               </a>
+           
+           </div>
+       </div>
+   </header>
+   <!---play movie container-------->
+   <div class="play-container container">
+    <img src="leow.jpg" class="play-img">
+    <!---play text--------->
+    <div class="play-text">
+        <h3>LEO</h3>
+        <!----ratings------>
+        <div class="rating">
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bxs-star'></i>
+            <i class='bx bx-star'></i>
+        </div>
+        <!--------tags---->
+        <div class="tags">
+            <span>ACTION</span>
+            <span>THRILLER</span>
+            <span>2H 44M</span>
+            <span>4k</span>
+        </div>
+        <!---------Trailer-Button-------->
+        <a href="https://youtu.be/ozRCVFgsrbY?si=0P-dUWsKGdBXB5Ba" class="watch-btn">
+            <i class='bx bx-right-arrow'></i>
+            <span>watch the Trailer</span>
+        </a>
+    </div>
+        
+   </div>
+   <!----About--------------->
+   <div class="about-movie container">
+    <h2>LEO</h2>
+    <P>Things start to take an awry turn for a mild-mannered cafe owner, who gets caught in the crosshairs of a drug cartel.</P>
+    </div>
+   <!--------download----->
+   <div class="download">
+    <h2 class="download-title">Watch Movie online</h2>
+    <div class="download-links">
+        <a href="https://tg-movies4u.tgmkvofcl.workers.dev/watch/801014?hash=AgAD-A" Download>480P</a>
+        <a href="https://tg-movies4u.tgmkvofcl.workers.dev/watch/801014?hash=AgAD-A" Download>720P</a>
+        <a href="https://tg-movies4u.tgmkvofcl.workers.dev/watch/801014?hash=AgAD-A" Download>1080P</a>
+    </div>
+   </div>
+   <!----------Watch Online------------->
+   <div class="download">
+    <h2 class="download-title">Download Movie</h2>
+    <div class="download-links">
+        <a href=" https://tg-movies4u.tgmkvofcl.workers.dev/801014?hash=AgAD-A" Download>480P</a>
+        <a href=" https://tg-movies4u.tgmkvofcl.workers.dev/801014?hash=AgAD-A" Download>720P</a>
+        <a href=" https://tg-movies4u.tgmkvofcl.workers.dev/801014?hash=AgAD-A" Download>1080P</a>
+    </div>
+   </div>
+
+   <!----copyright-----------> 
+   <div class="copyright">
+       <p>&#169; All Rights Reserevd</p>
+   </div>
+   
+
+
+
+
+
+
+
+   
+   <script>
+       var swiper = new Swiper(".popular-content", {
+       slidesPerView:1,  
+         spaceBetween: 10,
+         autoplay: {
+           delay: 5500,
+           disableOnInteraction: false,
+         },
+         pagination: {
+           el: ".swiper-pagination",
+           clickable: true,
+         },
+         navigation: {
+           nextEl: ".swiper-button-next",
+           prevEl: ".swiper-button-prev",
+         },
+         breakpoints:{
+           280:{
+               slidesPerView:1,  
+               spaceBetween: 10,
+           },
+           320:{
+               slidesPerView:2,  
+               spaceBetween: 10,
+           },
+           510:{
+               slidesPerView:2,  
+               spaceBetween: 10,
+           },
+           758:{
+               slidesPerView:3,  
+               spaceBetween: 15,
+           },
+           900:{
+               slidesPerView:4,  
+               spaceBetween: 20,
+           },
+         },
+       });
+       
+       //show video
+       let playbutton = document.querySelector('.play-movie');
+       let video = document.querySelector('.video-container');
+       let closebtn = document.querySelector('.close-video');
+
+       playbutton.onclick=() =>{
+        video.classList.add("show-video")
+        // auto play when click on button
+        myvideo.play();
+       }
+       closebtn.onclick=() => {
+        video.classList.remove("show-video")
+          // pause on close video
+          myvideo.pause() ;
+       };
+     </script>
+</body>
+</html>
